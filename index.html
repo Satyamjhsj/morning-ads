@@ -1,197 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Device Registration & Setup Guide</title>
-  <meta name="description" content="Step-by-step guide to set up and activate Prime Video on smart TVs and streaming devices without any copyright issues.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClearTV Guides — TV Guides & Activation Help (USA)</title>
+  <meta name="description" content="Original TV guides, activation walkthroughs and device setup tips for TV owners in the USA. No copyrighted streams, no trademark misuse." />
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f7faff, #e3edf9);
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      padding: 20px;
-      line-height: 1.6em;
-    }
-    .container {
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 25px 20px;
-      width: 100%;
-      max-width: 900px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      font-size: 26px;
-      color: #2c3e50;
-      margin-bottom: 8px;
-      text-align: center;
-    }
-    .instructions {
-      font-size: 14px;
-      color: #555;
-      text-align: center;
-    }
-    .code-input input[type="text"] {
-      width: 100%;
-      padding: 14px;
-      margin-top: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-      text-align: center;
-    }
-    input::placeholder {
-      font-weight: 500;
-      color: #aaa;
-    }
-    .register-button {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .register-button button {
-      width: 60%;
-      padding: 10px;
-      font-size: 15px;
-      font-weight: bold;
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-    .register-button button:hover {
-      background-color: #217dbb;
-      transform: scale(1.03);
-    }
-    .steps, .guide {
-      margin-top: 30px;
-    }
-    .steps h3, .guide h3 {
-      font-size: 18px;
-      color: #3498db;
-      margin-bottom: 10px;
-    }
-    .steps ul, .guide ul {
-      padding-left: 20px;
-    }
-    .steps li, .guide li {
-      margin-bottom: 10px;
-      font-size: 14px;
-      color: #333;
-    }
-    .guide-section {
-      background: #f8f9fa;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 15px;
-      border-left: 5px solid #3498db;
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 22px;
-      }
-      .register-button button {
-        width: 80%;
-      }
-    }
-    @media (max-width: 480px) {
-      .container {
-        padding: 15px;
-      }
-      h1 {
-        font-size: 20px;
-      }
-      .register-button button {
-        width: 90%;
-        font-size: 14px;
-      }
-    }
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(4px); }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Register Your Device</h1>
-    <br>
-    <p class="instructions">Easily link your smart TV or streaming device to your account</p>
-    <br>
-    <p class="instructions">Enter the code displayed on your device to start streaming</p>
-
-    <div class="code-input">
-      <input type="text" placeholder="Enter Code" />
+<body class="bg-gray-50 text-gray-900 antialiased">
+  <header class="bg-white/60 sticky top-0 backdrop-blur z-40 border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold">CT</div>
+        <div>
+          <div class="text-lg font-semibold">ClearTV Guides</div>
+          <div class="text-xs text-gray-500">TV guides & activation help — USA</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex gap-4 items-center text-sm">
+        <a href="#guides" class="hover:underline">Guides</a>
+        <a href="#activation" class="hover:underline">Activation</a>
+        <a href="#reviews" class="hover:underline">Reviews</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#contact" class="px-3 py-1.5 bg-indigo-600 text-white rounded-md">Contact</a>
+      </nav>
+      <button id="mobileMenuBtn" class="md:hidden px-2 py-1">☰</button>
     </div>
-
-    <div class="register-button">
-      <button id="registerButton">Register</button>
-    </div>
-    <br>
-
-    <div class="steps">
-      <h3>Quick Registration Steps</h3>
-      <ul>
-        <li>Open the streaming app on your TV or device.</li>
-        <li>Select “Register on the website.”</li>
-        <li>Note the code displayed on your screen.</li>
-        <li>Visit the registration page and enter your code.</li>
-      </ul>
-    </div>
-
-    <div class="guide">
-      <h3>Setup Guide for Popular Devices</h3>
-      <div class="guide-section">
-        <strong>1. Fire TV / Stick</strong>
-        <ul>
-          <li>Open the app from the main menu.</li>
-          <li>If not installed, search and add it from the app store.</li>
-          <li>Sign in to start streaming.</li>
-        </ul>
-      </div>
-      <div class="guide-section">
-        <strong>2. Roku</strong>
-        <ul>
-          <li>Navigate to Streaming Channels → Search for the app.</li>
-          <li>Add and launch the channel.</li>
-          <li>Sign in or use the activation code method.</li>
-        </ul>
-      </div>
-      <div class="guide-section">
-        <strong>3. Apple TV</strong>
-        <ul>
-          <li>Search and install the app from the App Store.</li>
-          <li>Open it and log in or enter the displayed code online.</li>
-        </ul>
-      </div>
-      <div class="guide-section">
-        <strong>4. Android TV</strong>
-        <ul>
-          <li>Find and install the app from Google Play Store.</li>
-          <li>Launch and log in to your account.</li>
-        </ul>
-      </div>
-      <div class="guide-section">
-        <strong>5. Smart TVs</strong>
-        <ul>
-          <li>Check if the app is pre-installed or download it from the TV’s app store.</li>
-          <li>Open and log in to enjoy streaming.</li>
-        </ul>
+    <div id="mobileMenu" class="hidden md:hidden border-t">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="#guides">Guides</a>
+        <a href="#activation">Activation</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="font-medium">Contact</a>
       </div>
     </div>
-  </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <section id="home" class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-extrabold">TV guides, setup & activation help — made simple</h1>
+        <p class="mt-4 text-gray-600">Original how-tos, troubleshooting steps and device setup checklists for TV owners in the United States. We do not host or link to copyrighted TV streams or provide pirated activation tools.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#guides" class="px-4 py-2 bg-indigo-600 text-white rounded-md">Browse Guides</a>
+          <a href="#activation" class="px-4 py-2 border rounded-md">Activation Walkthroughs</a>
+        </div>
+        <ul class="mt-6 text-sm text-gray-500 space-y-1">
+          <li>✅ Original written guides (no copyrighted content)</li>
+          <li>✅ Neutral — no claims of official affiliation with TV networks</li>
+          <li>✅ Privacy-friendly contact form (no public address)</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm glass">
+        <h3 class="font-semibold">Quick start</h3>
+        <ol class="mt-3 text-sm text-gray-600 list-decimal list-inside space-y-2">
+          <li>Use your own original screenshots or free-to-use images (Unsplash / Pexels) and credit them.</li>
+          <li>Do not copy TV network logos or screenshots that might contain copyrighted UI — crop or blur those parts.</li>
+          <li>Keep all claims factual; avoid implying partnership with any TV provider or brand.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="guides" class="mt-16">
+      <h2 class="text-2xl font-bold">Latest Guides</h2>
+      <p class="text-sm text-gray-500">Short, original how-tos for common TV tasks.</p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="p-4 bg-white rounded-lg shadow-sm">
+          <h3 class="font-semibold">How to connect a streaming device to Wi‑Fi</h3>
+          <p class="mt-2 text-sm text-gray-600">Step-by-step checklist for Roku/Fire TV/Apple TV. No software downloads provided.</p>
+          <a class="mt-3 inline-block text-indigo-600 text-sm" href="#">Read guide →</a>
+        </article>
+        <article class="p-4 bg-white rounded-lg shadow-sm">
+          <h3 class="font-semibold">Set up closed captions & audio options</h3>
+          <p class="mt-2 text-sm text-gray-600">Explain accessibility settings that exist on many TV platforms.</p>
+          <a class="mt-3 inline-block text-indigo-600 text-sm" href="#">Read guide →</a>
+        </article>
+        <article class="p-4 bg-white rounded-lg shadow-sm">
+          <h3 class="font-semibold">Factory reset safely</h3>
+          <p class="mt-2 text-sm text-gray-600">What to back up and what to expect when you factory-reset a TV.</p>
+          <a class="mt-3 inline-block text-indigo-600 text-sm" href="#">Read guide →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="activation" class="mt-14">
+      <h2 class="text-2xl font-bold">Activation help (policy-safe)</h2>
+      <p class="text-sm text-gray-500">Information and official links to help you activate legitimate subscriptions and devices. We never provide pirated activation codes or instructions to bypass paid gates.</p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Official activation links</h4>
+          <p class="mt-2 text-sm text-gray-600">We link to official activation pages (e.g., device manufacturer or service provider). Always use official vendor pages and your own account credentials.</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Troubleshooting tips</h4>
+          <p class="mt-2 text-sm text-gray-600">Network checks, firmware updates, and account verification steps you can perform yourself.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="mt-14">
+      <h2 class="text-2xl font-bold">Device Reviews</h2>
+      <p class="text-sm text-gray-500">Research-focused product reviews. Use original photos or free images and simple scorecards.</p>
+      <div class="mt-6">
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <h3 class="font-semibold">Device model — short review</h3>
+          <p class="mt-2 text-sm text-gray-600">Example: performance, ease of setup, and link to official manufacturer page. No affiliate links unless disclosed clearly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="mt-14">
+      <h2 class="text-2xl font-bold">About ClearTV Guides</h2>
+      <p class="mt-3 text-gray-600">We publish original guides, troubleshooting steps and research-based reviews for TV owners in the USA. We are independent and are not affiliated with any TV manufacturers or broadcasters. We avoid copyrighted content and do not host or link to unauthorized streams.</p>
+      <div class="mt-6 grid sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Why this site is Google Ads friendly</h4>
+          <ul class="mt-2 text-sm text-gray-600 list-disc list-inside">
+            <li>Original text and images (or properly licensed/free images).</li>
+            <li>No misleading claims of affiliation with brands or broadcasters.</li>
+            <li>Clear privacy policy, contact method and TOS (see footer).</li>
+            <li>No instructions for bypassing paid services or copyrighted content.</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-sm">
+          <h4 class="font-semibold">Avoid Google Business verification</h4>
+          <p class="mt-2 text-sm text-gray-600">If you do not want to register a Google Business Profile (which can request verification), keep the site as an informational site with contact by email and contact form only — avoid listing a public physical address.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mt-14">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <p class="text-sm text-gray-500">Questions or business inquiries: we use email only.</p>
+      <div class="mt-4 bg-white p-4 rounded-lg shadow-sm">
+        <p class="text-sm text-gray-600">You can reach us directly at: <a href="mailto:support@primejtv.site" class="underline">support@primejtv.site</a></p>
+      </div>
+      <p class="mt-4 text-xs text-gray-500">We intentionally do not display a physical business address to reduce the chance of Google Business verification.</p>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid sm:grid-cols-3 gap-6">
+      <div>
+        <div class="font-semibold">ClearTV Guides</div>
+        <div class="text-sm text-gray-600 mt-2">Original TV guides for US audiences. No copyrighted streams or affiliation claims.</div>
+      </div>
+      <div>
+        <div class="font-semibold">Legal</div>
+        <ul class="text-sm text-gray-600 mt-2 space-y-1">
+          <li><a href="#privacy" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#terms" class="hover:underline">Terms of Service</a></li>
+          <li><a href="#disclaimer" class="hover:underline">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">Contact</div>
+        <div class="text-sm text-gray-600 mt-2">Email: <a href="mailto:support@primejtv.site" class="underline">support@primejtv.site</a></div>
+      </div>
+    </div>
+    <div class="text-xs text-gray-400 text-center py-3">© <span id="year"></span> ClearTV Guides — Content original or properly licensed.</div>
+  </footer>
 
   <script>
-    document.getElementById("registerButton").addEventListener("click", function () {
-      window.location.href = "index2.html";
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('mobileMenuBtn').addEventListener('click', ()=>{
+      const m = document.getElementById('mobileMenu');
+      m.classList.toggle('hidden');
     });
   </script>
 </body>
